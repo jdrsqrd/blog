@@ -2,6 +2,10 @@ require "bundler/capistrano"
 
 server "jdr.ewhosts.net", :web, :app, :db, primary: true
 
+set :default_environment, {
+	'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+}
+
 set :application, "blog"
 set :user, "john"
 set :deploy_to, "/home/#{user}/production/#{application}"
@@ -49,3 +53,4 @@ namespace :deploy do
 	end
 	before "deploy", "deploy:check_revision"
 end
+
