@@ -4,7 +4,7 @@ set -e
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
 export BRAND="Tasmania"
-APP_ROOT=/home/john/production/dashboard/current
+APP_ROOT=/home/john/production/blog/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 AS_USER=john

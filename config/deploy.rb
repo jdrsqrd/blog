@@ -2,7 +2,7 @@ require "bundler/capistrano"
 
 server "jdr.ewhosts.net", :web, :app, :db, primary: true
 
-set :application, "dashboard"
+set :application, "blog"
 set :user, "john"
 set :deploy_to, "/home/#{user}/production/#{application}"
 set :deploy_via, :remote_cache
